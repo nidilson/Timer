@@ -1,8 +1,176 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<div id="seleccion-tipo-timer" class="tipo-timer-container">
+	<div class="consulta-tipo-timer">
+		<span>¿Qué vas a hacer?</span>		
+	</div>
+	<div class="select-container">
+		<select name="tipo-timer" id="tipo-timer">
+			<option value="">Estudiar</option>
+			<option value="Trabajo enfocado">Trabajo enfocado</option>
+			<option value="Técnica pomodoro">Técnica pomodoro</option>
+			<option value="Descansar">Descansar</option>
+			<option value="Ejercicio">Ejercicio</option>
+			<option value="Llamada">Llamada</option>
+			<option value="Cocinar">Cocinar</option>
+			<option value="Limpiar">Limpiar</option>
+			<option value="Otro">Otro</option>
+		</select>
+		<form method="post" action="" class="form-tipo-timer-nuevo">
+			<input class="text-input" type="text" name="tipo-personalizado" placeholder="Escribe un motivo" maxlength="20"/>
+			<button class="submit-button" type="submit"><i class="bi bi-plus icono-pequeno"></i></button>
+		</form>
+	</div>
+	<div class="sugerencia-container">
+		<span>Sugerencia: </span>
+		<span id="sugerencia"></span>
+	</div>
+</div>
+<div class="timer-container">
+	<div class="circulo-exterior">
+		<div class="circulo-medio">
+			<div class="circulo-interior">
+				<div class="timer">
+					<span class="tiempo">45:00</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="botones-container">
+	<button id="menos5-boton" class="control-tiempo-button">
+		- 5 min
+	</button>
+	<button id="iniciar-boton" class="accion-button">
+		<i class="bi bi-play-fill icon-boton-accion"></i> Iniciar
+	</button>
+	<button id="pausar-boton" class="accion-button">
+		<i class="bi bi-pause icon-boton-accion"></i> Pausar
+	</button>
+	<button id="reiniciar-boton" class="accion-button">
+		<i class="bi bi-arrow-counterclockwise icon-boton-accion"></i> Reiniciar
+	</button>
+	<button id="mas5-boton" class="control-tiempo-button">
+		+ 5 min
+	</button>
+</div>
+<div class="linea-separadora-horizontal"></div>
+<div class="historial-container">
+	<div class="encabezado-historial">
+		<i class="bi bi-bar-chart-fill icon-header-sesion-card"></i>
+		<h1 class="encabezado-historial-h1">Historial de sesiones</h1>
+	</div>
+	<div class="sesiones-container">
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
+				
+			</div>
+		</div>
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+			</div>
+		</div>
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
+				
+			</div>
+		</div>
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
+
+			</div>
+		</div>
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
+				
+			</div>
+		</div>
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
+				
+			</div>
+		</div>
+		<div class="sesion-card">
+			<div class="titulo-sesion-card">
+				<h2 class="encabezado-sesion-h2">Estudiar Matemáticas - 40 min</h2>
+			</div>
+			<div class="detalle-sesion-card">
+				<div>
+					<i class="bi bi-clock icon-sesion-card"></i>
+					<span class="fecha-sesion">Hoy</span>
+				</div>
+				<div>
+					<i class="bi bi-check-circle-fill icon-sesion-card"></i>
+					<span class="estado-sesion">Completado</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
 </div>
