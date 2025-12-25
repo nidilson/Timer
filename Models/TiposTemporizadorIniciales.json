@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "nombre": "Estudiar",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 50,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Trabajo enfocado",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 45,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Tecnica pomodoro",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 25,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Descansar",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 5,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Ejercicio",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 30,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Llamada",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 15,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 7,
+        "nombre": "Cocinar",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 40,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 8,
+        "nombre": "Limpiar",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 30,
+            "segundos": 0
+        }
+    },
+    {
+        "id": 9,
+        "nombre": "Otro",
+        "recomendado": {
+            "horas": 0,
+            "minutos": 10,
+            "segundos": 0
+        }
+    }
+]

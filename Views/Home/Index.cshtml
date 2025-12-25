@@ -1,0 +1,236 @@
+﻿<div id="seleccion-tipo-timer" class="tipo-timer-container">
+	<div class="consulta-tipo-timer">
+		<span>¿Qué vas a hacer?</span>		
+	</div>
+	<div class="select-container">
+		<select name="tipo-timer" id="tipo-timer">
+			
+		</select>
+		<form id="form-tipo-personalizado" class="form-tipo-timer-nuevo">
+			<div class="input-tipo-container">
+				<input class="text-input" type="text" name="tipo-personalizado" id="tipo-personalizado" placeholder="Escribe un motivo" maxlength="20" required />
+				<span id="error-tipo-personalizado" class="error-span no-mostrar"><i class="bi bi-exclamation-circle icon-error"></i>Error</span>
+			</div>			
+			<button class="submit-button" type="submit"><i class="bi bi-plus icono-pequeno"></i></button>
+		</form>
+	</div>
+</div>
+<div class="timer-container">
+	<a href="#modal" class="open-modal" id="open-modal">
+		<div class="circulo-exterior">
+			<div class="circulo-medio" id="circulo-medio">
+				<div class="circulo-interior" id="circulo-interior">
+				</div>
+			</div>
+			<div class="timer">
+				<span id="horas" class="tiempo">00</span>
+				<span id="separador-hm" class="tiempo">:</span>
+				<span id="minutos" class="tiempo">00</span>
+				<span id="separador-ms" class="tiempo">:</span>
+				<span id="segundos" class="tiempo">00</span>
+			</div>
+		</div>
+	</a>
+	
+</div>
+<div class="botones-container">
+	<button id="menos5-boton" class="control-tiempo-button">
+		- 5 min
+	</button>
+	<button id="iniciar-boton" class="accion-button">
+		<i class="bi bi-play-fill icon-boton-accion"></i>
+	</button>
+	<button id="pausar-boton" class="accion-button no-mostrar">
+		<i class="bi bi-pause icon-boton-accion"></i>
+	</button>
+	<button id="reiniciar-boton" class="accion-button no-mostrar">
+		<i class="bi bi-arrow-counterclockwise icon-boton-accion"></i>
+	</button>
+	<button id="mas5-boton" class="control-tiempo-button">
+		+ 5 min
+	</button>
+</div>
+<div class="linea-separadora-horizontal"></div>
+<div class="historial-container">
+	<div class="encabezado-historial">
+		<i class="bi bi-bar-chart-fill icon-header-sesion-card"></i>
+		<h1 class="encabezado-historial-h1">Historial de sesiones</h1>
+	</div>
+	<div class="sesiones-container" id="sesiones-container">
+
+	</div>
+	
+</div>
+
+<div id="modal" class="modal">
+	<div class="modal-content">
+		<h2>Seleccione la duración</h2>
+		
+		<div class="hora-seleccionada-container">
+			<span class="horas hora-seleccionada" id="hora">00</span>
+			<span class="separador-h-m hora-seleccionada" id="separador-h-m">:</span>
+			<span class="minutos hora-seleccionada" id="minuto">00</span>
+			<span class="separador-m-s hora-seleccionada" id="separador-m-s">:</span>
+			<span class="segundos hora-seleccionada" id="segundo">00</span>
+		</div>
+
+		<div class="seleccion-temporizador-container">
+			<div class="seleccion-container seleccion-horas">
+				<div class="seleccion sel-hor" data-valor="00">00</div>
+				<div class="seleccion sel-hor" data-valor="01">01</div>
+				<div class="seleccion sel-hor" data-valor="02">02</div>
+				<div class="seleccion sel-hor" data-valor="03">03</div>
+				<div class="seleccion sel-hor" data-valor="04">04</div>
+				<div class="seleccion sel-hor" data-valor="05">05</div>
+				<div class="seleccion sel-hor" data-valor="06">06</div>
+				<div class="seleccion sel-hor" data-valor="07">07</div>
+				<div class="seleccion sel-hor" data-valor="08">08</div>
+				<div class="seleccion sel-hor" data-valor="09">09</div>
+				<div class="seleccion sel-hor" data-valor="10">10</div>
+				<div class="seleccion sel-hor" data-valor="11">11</div>
+				<div class="seleccion sel-hor" data-valor="12">12</div>
+				<div class="seleccion sel-hor" data-valor="13">13</div>
+				<div class="seleccion sel-hor" data-valor="14">14</div>
+				<div class="seleccion sel-hor" data-valor="15">15</div>
+				<div class="seleccion sel-hor" data-valor="16">16</div>
+				<div class="seleccion sel-hor" data-valor="17">17</div>
+				<div class="seleccion sel-hor" data-valor="18">18</div>
+				<div class="seleccion sel-hor" data-valor="19">19</div>
+				<div class="seleccion sel-hor" data-valor="20">20</div>
+				<div class="seleccion sel-hor" data-valor="21">21</div>
+				<div class="seleccion sel-hor" data-valor="22">22</div>
+				<div class="seleccion sel-hor" data-valor="23">23</div>
+
+			</div>
+			<div class="seleccion-container seleccion-minutos">
+				<div class="seleccion sel-min" data-valor="00">00</div>
+				<div class="seleccion sel-min" data-valor="01">01</div>
+				<div class="seleccion sel-min" data-valor="02">02</div>
+				<div class="seleccion sel-min" data-valor="03">03</div>
+				<div class="seleccion sel-min" data-valor="04">04</div>
+				<div class="seleccion sel-min" data-valor="05">05</div>
+				<div class="seleccion sel-min" data-valor="06">06</div>
+				<div class="seleccion sel-min" data-valor="07">07</div>
+				<div class="seleccion sel-min" data-valor="08">08</div>
+				<div class="seleccion sel-min" data-valor="09">09</div>
+				<div class="seleccion sel-min" data-valor="10">10</div>
+				<div class="seleccion sel-min" data-valor="11">11</div>
+				<div class="seleccion sel-min" data-valor="12">12</div>
+				<div class="seleccion sel-min" data-valor="13">13</div>
+				<div class="seleccion sel-min" data-valor="14">14</div>
+				<div class="seleccion sel-min" data-valor="15">15</div>
+				<div class="seleccion sel-min" data-valor="16">16</div>
+				<div class="seleccion sel-min" data-valor="17">17</div>
+				<div class="seleccion sel-min" data-valor="18">18</div>
+				<div class="seleccion sel-min" data-valor="19">19</div>
+				<div class="seleccion sel-min" data-valor="20">20</div>
+				<div class="seleccion sel-min" data-valor="21">21</div>
+				<div class="seleccion sel-min" data-valor="22">22</div>
+				<div class="seleccion sel-min" data-valor="23">23</div>
+				<div class="seleccion sel-min" data-valor="24">24</div>
+				<div class="seleccion sel-min" data-valor="25">25</div>
+				<div class="seleccion sel-min" data-valor="26">26</div>
+				<div class="seleccion sel-min" data-valor="27">27</div>
+				<div class="seleccion sel-min" data-valor="28">28</div>
+				<div class="seleccion sel-min" data-valor="29">29</div>
+				<div class="seleccion sel-min" data-valor="30">30</div>
+				<div class="seleccion sel-min" data-valor="31">31</div>
+				<div class="seleccion sel-min" data-valor="32">32</div>
+				<div class="seleccion sel-min" data-valor="33">33</div>
+				<div class="seleccion sel-min" data-valor="34">34</div>
+				<div class="seleccion sel-min" data-valor="35">35</div>
+				<div class="seleccion sel-min" data-valor="36">36</div>
+				<div class="seleccion sel-min" data-valor="37">37</div>
+				<div class="seleccion sel-min" data-valor="38">38</div>
+				<div class="seleccion sel-min" data-valor="39">39</div>
+				<div class="seleccion sel-min" data-valor="40">40</div>
+				<div class="seleccion sel-min" data-valor="41">41</div>
+				<div class="seleccion sel-min" data-valor="42">42</div>
+				<div class="seleccion sel-min" data-valor="43">43</div>
+				<div class="seleccion sel-min" data-valor="44">44</div>
+				<div class="seleccion sel-min" data-valor="45">45</div>
+				<div class="seleccion sel-min" data-valor="46">46</div>
+				<div class="seleccion sel-min" data-valor="47">47</div>
+				<div class="seleccion sel-min" data-valor="48">48</div>
+				<div class="seleccion sel-min" data-valor="49">49</div>
+				<div class="seleccion sel-min" data-valor="50">50</div>
+				<div class="seleccion sel-min" data-valor="51">51</div>
+				<div class="seleccion sel-min" data-valor="52">52</div>
+				<div class="seleccion sel-min" data-valor="53">53</div>
+				<div class="seleccion sel-min" data-valor="54">54</div>
+				<div class="seleccion sel-min" data-valor="55">55</div>
+				<div class="seleccion sel-min" data-valor="56">56</div>
+				<div class="seleccion sel-min" data-valor="57">57</div>
+				<div class="seleccion sel-min" data-valor="58">58</div>
+				<div class="seleccion sel-min" data-valor="59">59</div>
+			</div>
+			<div class="seleccion-container seleccion-segundos">
+				<div class="seleccion sel-seg" data-valor="00">00</div>
+				<div class="seleccion sel-seg" data-valor="01">01</div>
+				<div class="seleccion sel-seg" data-valor="02">02</div>
+				<div class="seleccion sel-seg" data-valor="03">03</div>
+				<div class="seleccion sel-seg" data-valor="04">04</div>
+				<div class="seleccion sel-seg" data-valor="05">05</div>
+				<div class="seleccion sel-seg" data-valor="06">06</div>
+				<div class="seleccion sel-seg" data-valor="07">07</div>
+				<div class="seleccion sel-seg" data-valor="08">08</div>
+				<div class="seleccion sel-seg" data-valor="09">09</div>
+				<div class="seleccion sel-seg" data-valor="10">10</div>
+				<div class="seleccion sel-seg" data-valor="11">11</div>
+				<div class="seleccion sel-seg" data-valor="12">12</div>
+				<div class="seleccion sel-seg" data-valor="13">13</div>
+				<div class="seleccion sel-seg" data-valor="14">14</div>
+				<div class="seleccion sel-seg" data-valor="15">15</div>
+				<div class="seleccion sel-seg" data-valor="16">16</div>
+				<div class="seleccion sel-seg" data-valor="17">17</div>
+				<div class="seleccion sel-seg" data-valor="18">18</div>
+				<div class="seleccion sel-seg" data-valor="19">19</div>
+				<div class="seleccion sel-seg" data-valor="20">20</div>
+				<div class="seleccion sel-seg" data-valor="21">21</div>
+				<div class="seleccion sel-seg" data-valor="22">22</div>
+				<div class="seleccion sel-seg" data-valor="23">23</div>
+				<div class="seleccion sel-seg" data-valor="24">24</div>
+				<div class="seleccion sel-seg" data-valor="25">25</div>
+				<div class="seleccion sel-seg" data-valor="26">26</div>
+				<div class="seleccion sel-seg" data-valor="27">27</div>
+				<div class="seleccion sel-seg" data-valor="28">28</div>
+				<div class="seleccion sel-seg" data-valor="29">29</div>
+				<div class="seleccion sel-seg" data-valor="30">30</div>
+				<div class="seleccion sel-seg" data-valor="31">31</div>
+				<div class="seleccion sel-seg" data-valor="32">32</div>
+				<div class="seleccion sel-seg" data-valor="33">33</div>
+				<div class="seleccion sel-seg" data-valor="34">34</div>
+				<div class="seleccion sel-seg" data-valor="35">35</div>
+				<div class="seleccion sel-seg" data-valor="36">36</div>
+				<div class="seleccion sel-seg" data-valor="37">37</div>
+				<div class="seleccion sel-seg" data-valor="38">38</div>
+				<div class="seleccion sel-seg" data-valor="39">39</div>
+				<div class="seleccion sel-seg" data-valor="40">40</div>
+				<div class="seleccion sel-seg" data-valor="41">41</div>
+				<div class="seleccion sel-seg" data-valor="42">42</div>
+				<div class="seleccion sel-seg" data-valor="43">43</div>
+				<div class="seleccion sel-seg" data-valor="44">44</div>
+				<div class="seleccion sel-seg" data-valor="45">45</div>
+				<div class="seleccion sel-seg" data-valor="46">46</div>
+				<div class="seleccion sel-seg" data-valor="47">47</div>
+				<div class="seleccion sel-seg" data-valor="48">48</div>
+				<div class="seleccion sel-seg" data-valor="49">49</div>
+				<div class="seleccion sel-seg" data-valor="50">50</div>
+				<div class="seleccion sel-seg" data-valor="51">51</div>
+				<div class="seleccion sel-seg" data-valor="52">52</div>
+				<div class="seleccion sel-seg" data-valor="53">53</div>
+				<div class="seleccion sel-seg" data-valor="54">54</div>
+				<div class="seleccion sel-seg" data-valor="55">55</div>
+				<div class="seleccion sel-seg" data-valor="56">56</div>
+				<div class="seleccion sel-seg" data-valor="57">57</div>
+				<div class="seleccion sel-seg" data-valor="58">58</div>
+				<div class="seleccion sel-seg" data-valor="59">59</div>
+
+			</div>
+		</div>
+
+		<button id="seleccion-temporizador-boton" class="seleccion-temporizador-boton">
+			Seleccionar
+		</button>
+	</div>
+</div>
