@@ -15,6 +15,7 @@ var temporizadorParcial = {
 var tiempoInicial;
 var temporizadorId;
 var temporizadorEnPausa = false;
+
 document.addEventListener('DOMContentLoaded', async () => { 
 
     var formNuevoTipoTimer = document.getElementById("form-tipo-personalizado");
@@ -77,7 +78,7 @@ function SumarMinutosATemporizador(minutos) {
 function RestarMinutosATemporizador(minutos) {
     PausarTemporizador();
     let segundosRestantes = ConvertirASegundos(temporizadorParcial);
-    segundosRestantes = segundosRestantes - 300 > 0 ? segundosRestantes - 300 : 0;
+    segundosRestantes = segundosRestantes - (minutos * 60) > 0 ? segundosRestantes - (minutos * 60) : 0;
     temporizadorParcial = ConvertirATemporizador(segundosRestantes);
 
     IniciarTemporizador();
@@ -366,7 +367,7 @@ function RenderTemporizador(horas, minutos, segundos) {
 function CrearHistorialCards() {
     let historialHTML = "";
     historial = getStorage().historial;
-    historial = historial.slice(0, 20);
+    historial = historial.slice(-20);
     historial.reverse().forEach(sesion => {
         historialHTML += `<div class="sesion-card">
 			<div class="titulo-sesion-card">
@@ -384,8 +385,8 @@ function CrearHistorialCards() {
 
 			</div>
 		</div>`;
-    })
-
+    });
+    historial = getStorage().historial;
     let container = document.getElementById("sesiones-container");
     try {
         container.innerHTML = historialHTML;
@@ -415,7 +416,7 @@ function CompletarUltimaSesion() {
         }
     });
 
-    historial[0].estado = "Completo";
+    historial[historial.length - 1].estado = "Completo";
     updateStorage();
     CrearHistorialCards();
 }
